@@ -1,165 +1,90 @@
-<?xml version="1.0" encoding="iso-8859-1"?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" media="all" href="css/Stylesheet.css" />
+<meta name="description" content="Just a simple site for searching for films by either name or year and name." />
 <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
 <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
 <link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/Stylesheet.css" />
 <script type="text/javascript" src="scripts/JQuery.js"></script>
 <script type="text/javascript" src="scripts/mustache.js"></script>
+<script type="text/javascript" src="scripts/jquery.cookie/jquery.cookie.js"></script>
 <script type="text/javascript" src="scripts/javascript.js"></script>
-<title>MFLS - My Film Lookup-Site</title>
+<title>Neat-Gimmick-Overlay</title>
+</head>
 <body>
-<div class="wrapper" id="html_wrapper"><span class="removeInFinalVersion">class "wrapper" id "html_wrapper"</span>
-  <div class="wrapper" id="header_wrapper"><span class="removeInFinalVersion">class "wrapper" id "header_wrapper"</span></div>
-  <div class="wrapper" id="body_wrapper">
-    <div class="wrapper" id="search_wrapper"><span class="removeInFinalVersion">class "wrapper" id "search_wrapper"</span>
-      <div id="search_div"><span class="removeInFinalVersion">id "search_div"</span>
-        <div id="search_input"><!--id "search_input"<br />-->
-          <form action="" method="post" name="search_form" class="form" id="search_form" title="search_form" onSubmit="" onClick="">
-            <fieldset>
-              <legend>Search</legend>
-              <label>Title:
-                <input type="text" name="title_input" id="title_input" />
-              </label>
-              <br />
-              <label>Year:
-                <input type="text" name="year_input" id="year_input" />
-              </label>
-              <br />
-              <input name="search_btn" type="submit" class="Btn" id="search_btn" title="search_btn" onClick="" />
-              <input name="reset_search" type="reset" class="Btn" id="reset_search" title="reset_search" onClick="" />
-            </fieldset>
-          </form>
-        </div>
-        <div id="search_resulthtml_div" class="removeInFinalVersion2"><span class="removeInFinalVersion">id "search_resulthtml"<br /></span>
-          <span id="search_resulthtml"></span></div>
-      </div>
-    </div>
-    <div class="wrapper" id="result_wrapper"><span class="removeInFinalVersion">class "wrapper" id "result_wrapper"</span>
-      <div id="results"><span class="removeInFinalVersion">id "results"</span>
-        <div id="search_results">
-          <span class="removeInFinalVersion"><p>id "search_results"</p></span>
-          <p><a name="result_anker">Results:</a></p>
-          <hr />
-          <table>
-            <tr>
-              <td><table class="search_result_table" border="1px">
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th>Year</th>
-                      <th>Type</th>
-                      <th>ImdbID</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                    <tr>
-                      <td class="Title"><a href='#result_anker' class='title_link'>&nbsp;</a></td>
-                      <td class="Year"></td>
-                      <td class="Type"></td>
-                      <td class="imdbID"></td>
-                    </tr>
-                  </tbody>
-                  <script>
-				    var view = {
-				      platzhalter: "Platzhalter"
-				    };
-				    var out = Mustache.render("{{platzhalter}}",view, {});
-				    $(".search_result_table tr:nth-child(1n + 1) td a").html(out);
-				</script>
-                </table></td>
-              <td><div id="detailed_film_info"><!--id "detailed_film_info"-->
-                  <table>
-                    <tr>
-                      <td>
-                        <a id="detailed_film_info_poster_link" href=""> <img id="detailed_film_info_poster" src="" alt="Movie poster not found, sorry!" width="300" height="450" /></a>
-                      </td>
-                      <td id="detailed_film_info_info-td" >
-                        <p>"<span id="detailed_film_info_title"></span>" (<span id="detailed_film_info_year"></span>) | <span id="detailed_film_info_type"></span> <br />
-                          Rated: <span id="detailed_film_info_rated"></span> - <span id="detailed_film_info_runtime"></span> - Genre(s): <span id="detailed_film_info_genre"></span> <br />
-                          Released <span id="detailed_film_info_released"></span> in cinemas, <span id="detailed_film_info_dvd"></span> on dvd - originally in <span id="detailed_film_info_language"></span>
-                        
-                        <hr />
-                        Plot:<br />
-                        <span id="detailed_film_info_plot"></span>
-                        <hr />
-                        Actors:<br />
-                        <span id="detailed_film_info_actors"></span>
-                        <hr />
-                        Metascore: <span id="detailed_film_info_metascore"></span> | imdbRating: <span id="detailed_film_info_imdbrating"></span> | tomatoRating: <span id="detailed_film_info_tomatorating"></span>
-                        <hr />
-                        Official website: <a id="detailed_film_info_website_link" href=""><span id="detailed_film_info_website"></span></a>
-                        </p>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </td>
-            </tr>
-          </table>
-          <div id="final_film_info" class="removeInFinalVersion2"><span class="removeInFinalVersion">id "final_film_info"</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper" id="footer_wrapper"><span class="removeInFinalVersion">class "wrapper" id "footer_wrapper"</span></div>
+<div class="wrapper container_12" id="html_wrapper">
+	<div class="wrapper grid_12" id="header_wrapper">
+		<div class="grid_12 alpha">
+			<h1>Neat-Gimmick-Overlay aka. N-G-O</h1>
+			<h4>Ever bothered by a lack of gimmicks? Then this is the place where you'll find what you're looking for.</h4>
+			<hr />
+		</div>
+	</div>
+	<div class="wrapper grid_12" id="body_wrapper">
+		<div class="grid_12">
+			<h6>Simply enter a URL bellow and you'll have yourself an overlay with gimmicks like Facebook Messages and more for whatever site you're using. For a full list of features please see the list found by clicking the link immediately bellow.</h6>
+		</div>
+		<div class="grid_12" style="margin-bottom:20px;"> <a onclick="fullListOfFeaturesToggle();" id="fullListOfFeaturesLink">Click me for the full list of features</a>
+			<div style="display:none;" class="grid_11" id="fullListOfFeatures">
+				<ul style="margin-top:20px;">
+					<li>Facebook,</li>
+					<li>Twitter</li>
+					<li>and Google integration</li>
+				</ul>
+				<a onclick="fullListOfFeaturesToggle();">Click me to close the list again</a> </div>
+		</div>
+		<div class="grid_12">
+			<h6>But remember that all of these features can and should be customized to be as fitting as possible.</h6>
+		</div>
+		<hr />
+		<div class="grid_5">
+			<form>
+				<fieldset style="border:1px solid gray; padding:1em;">
+					<legend>
+					<h6>Which site would you like to view?</h6>
+					</legend>
+					<table style="margin-bottom:10px;">
+						<thead>
+							<tr>
+								<th class="grid_2"> </th>
+								<th> </th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><label for="URL_Input">URL:</label></td>
+								<td><input type="text" name="URL_Input" /></td>
+							</tr>
+							<tr>
+								<td><label for="enableFacebook">Enable Facebook?</label></td>
+								<td><input type="checkbox" name="enableFacebook" /></td>
+							</tr>
+							<tr>
+								<td><label for="enableTwitter">Enable Twitter?</label></td>
+								<td><input type="checkbox" name="enableTwitter" /></td>
+							</tr>
+							<tr>
+								<td><label for="enableGoogle">Enable Google?</label></td>
+								<td><input type="checkbox" name="enableGoogle" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<input name="submit_btn" type="submit" class="Btn" id="submit_btn" onClick="" />
+					<input name="reset_btn" type="reset" class="Btn" id="reset_btn" onClick="" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="wrapper grid_12" id="footer_wrapper">
+		<div class="grid_12 alpha">
+			<hr />
+			<p style="float:left; margin-bottom:10px;">No Copyright &copy; 2014 No rights reserved. Use anything you might find useful if you so desire :)</p>
+			<p style="float:right; margin-bottom:10px;">Thanks for visiting.</p>
+		</div>
+	</div>
 </div>
 </body>
 </html>
